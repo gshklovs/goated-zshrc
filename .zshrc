@@ -90,3 +90,9 @@ elif [[ -r "$HOME/powerlevel10k/powerlevel10k.zsh-theme" ]]; then
 fi
 
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+export PATH="$HOME/.local/bin:$PATH"
+
+# Find text in files with fzf and open in vim
+alias fl='/home/grego/Development/fl'
+alias f='f(){ rg "$1" | bat | fzf; }; f'
